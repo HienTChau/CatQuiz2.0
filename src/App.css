@@ -3,7 +3,6 @@ body {
   background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  /* background-attachment: fixed; Keep the background fixed during scrolling */
   margin: 0;
   font-family: Arial, sans-serif;
   color: #66572d;
@@ -67,7 +66,8 @@ body {
   }
 }
 
-button {
+button, input[type="text"]{
+  margin: 5px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -80,12 +80,30 @@ button {
   transition: background-color 0.25s;
   /* margin-top: 20px; */
 }
+input[type="text"]{
+  background-color: white;
+  color: #66572d;
+  cursor: text;
+}
 
 button:hover {
   background-color: #333;
 }
 
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+button:disabled{
+  opacity: 50%;
+}
+button:disabled:hover{
+  background-color: #66572d;
+}
+
+.incorrect{
+  border-color: crimson;
+}
+.correct{
+  border-color: darkgreen; /* Ensure the border is visible */
 }
